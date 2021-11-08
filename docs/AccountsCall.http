@@ -1,0 +1,7 @@
+###
+POST http://localhost:8080/myAccount
+Content-Type: application/json
+
+{
+  "customerId": 1
+}

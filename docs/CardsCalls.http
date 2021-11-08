@@ -1,0 +1,7 @@
+###
+POST http://localhost:9000/myCards
+Content-Type: application/json
+
+{
+  "customerId": 1
+}

@@ -1,0 +1,7 @@
+###
+POST http://localhost:8090/myLoans
+Content-Type: application/json
+
+{
+  "customerId": 1
+}
