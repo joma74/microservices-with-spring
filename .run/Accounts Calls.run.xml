@@ -1,0 +1,5 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Accounts Calls" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" path="$PROJECT_DIR$/docs/AccountsCall.http" runType="Run single request">
+    <method v="2" />
+  </configuration>
+</component>
