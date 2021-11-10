@@ -60,7 +60,10 @@
                     <image>
                         <name>eazybytes/${project.artifactId}</name>
                         <env>
+                            <!-- DOES NOT WORK -->
                             <BPE_DEFAULT_BPL_JVM_THREAD_COUNT>20</BPE_DEFAULT_BPL_JVM_THREAD_COUNT>
+                            <!-- DOES NOT WORK -->
+                            <BPE_DELIM_BPL_JVM_THREAD_COUNT xml:space="preserve"> </BPE_DELIM_BPL_JVM_THREAD_COUNT>
                         </env>
                     </image>
                     <layers>
