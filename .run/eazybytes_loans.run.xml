@@ -4,6 +4,14 @@
       <settings>
         <option name="imageTag" value="eazybytes/loans:latest" />
         <option name="containerName" value="eazybytes_loans" />
+        <option name="envVars">
+          <list>
+            <DockerEnvVarImpl>
+              <option name="name" value="BPL_JVM_THREAD_COUNT" />
+              <option name="value" value="20" />
+            </DockerEnvVarImpl>
+          </list>
+        </option>
         <option name="portBindings">
           <list>
             <DockerPortBindingImpl>
@@ -12,7 +20,7 @@
             </DockerPortBindingImpl>
           </list>
         </option>
-        <option name="commandLineOptions" value="-m 650m" />
+        <option name="commandLineOptions" value="-m 400m" />
       </settings>
     </deployment>
     <method v="2" />

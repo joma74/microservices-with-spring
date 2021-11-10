@@ -12,7 +12,7 @@
             </DockerPortBindingImpl>
           </list>
         </option>
-        <option name="commandLineOptions" value="-m 500m" />
+        <option name="commandLineOptions" value="-m 400m" />
         <option name="showCommandPreview" value="true" />
       </settings>
     </deployment>
