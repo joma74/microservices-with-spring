@@ -1,0 +1,20 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="eazybytes_loans" type="docker-deploy" factoryName="docker-image" server-name="Docker Local">
+    <deployment type="docker-image">
+      <settings>
+        <option name="imageTag" value="eazybytes/loans:latest" />
+        <option name="containerName" value="eazybytes_loans" />
+        <option name="portBindings">
+          <list>
+            <DockerPortBindingImpl>
+              <option name="containerPort" value="8090" />
+              <option name="hostPort" value="8090" />
+            </DockerPortBindingImpl>
+          </list>
+        </option>
+        <option name="commandLineOptions" value="-m 650m" />
+      </settings>
+    </deployment>
+    <method v="2" />
+  </configuration>
+</component>
