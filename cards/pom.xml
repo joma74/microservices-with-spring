@@ -57,6 +57,15 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
+                    <image>
+                        <name>eazybytes/${project.artifactId}</name>
+                        <env>
+                            <BPE_DEFAULT_BPL_JVM_THREAD_COUNT>20</BPE_DEFAULT_BPL_JVM_THREAD_COUNT>
+                        </env>
+                    </image>
+                    <layers>
+                        <enabled>true</enabled>
+                    </layers>
                     <excludes>
                         <exclude>
                             <groupId>org.projectlombok</groupId>
