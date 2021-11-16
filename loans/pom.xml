@@ -64,6 +64,10 @@
                 <configuration>
                     <image>
                         <name>eazybyte/${project.artifactId}</name>
+                        <env>
+                            <BP_OCI_AUTHORS>joma74</BP_OCI_AUTHORS>
+                            <BP_OCI_DESCRIPTION>Loans spring application of udemy course 'Master MS with java, spring, docker, kubernetes'</BP_OCI_DESCRIPTION>
+                        </env>
                     </image>
                     <excludes>
                         <exclude>

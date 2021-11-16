@@ -60,6 +60,8 @@
                     <image>
                         <name>eazybyte/${project.artifactId}</name>
                         <env>
+                            <BP_OCI_AUTHORS>joma74</BP_OCI_AUTHORS>
+                            <BP_OCI_DESCRIPTION>Cards spring application of udemy course 'Master MS with java, spring, docker, kubernetes'</BP_OCI_DESCRIPTION>
                             <!-- DOES NOT WORK -->
                             <BPE_DEFAULT_BPL_JVM_THREAD_COUNT>20</BPE_DEFAULT_BPL_JVM_THREAD_COUNT>
                             <!-- DOES NOT WORK -->
