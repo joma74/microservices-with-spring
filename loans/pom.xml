@@ -63,7 +63,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
                     <image>
-                        <name>eazybytes/${project.artifactId}</name>
+                        <name>eazybyte/${project.artifactId}</name>
                     </image>
                     <excludes>
                         <exclude>

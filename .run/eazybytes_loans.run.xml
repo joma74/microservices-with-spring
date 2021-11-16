@@ -1,9 +1,9 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="eazybytes_loans" type="docker-deploy" factoryName="docker-image" server-name="Docker Local">
+  <configuration default="false" name="eazybyte_loans" type="docker-deploy" factoryName="docker-image" server-name="Docker Local">
     <deployment type="docker-image">
       <settings>
-        <option name="imageTag" value="eazybytes/loans:latest" />
-        <option name="containerName" value="eazybytes_loans" />
+        <option name="imageTag" value="eazybyte/loans:latest" />
+        <option name="containerName" value="eazybyte_loans" />
         <option name="envVars">
           <list>
             <DockerEnvVarImpl>

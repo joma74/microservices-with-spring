@@ -1,9 +1,9 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="eazybytes_accounts" type="docker-deploy" factoryName="docker-image" server-name="Docker Local">
+  <configuration default="false" name="eazybyte_accounts" type="docker-deploy" factoryName="docker-image" server-name="Docker Local">
     <deployment type="docker-image">
       <settings>
-        <option name="imageTag" value="eazybytes/accounts:latest" />
-        <option name="containerName" value="eazybytes_accounts" />
+        <option name="imageTag" value="eazybyte/accounts:latest" />
+        <option name="containerName" value="eazybyte_accounts" />
         <option name="portBindings">
           <list>
             <DockerPortBindingImpl>

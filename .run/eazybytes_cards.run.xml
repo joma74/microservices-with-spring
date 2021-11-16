@@ -1,9 +1,9 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="eazybytes_cards" type="docker-deploy" factoryName="docker-image" server-name="Docker Local">
+  <configuration default="false" name="eazybyte_cards" type="docker-deploy" factoryName="docker-image" server-name="Docker Local">
     <deployment type="docker-image">
       <settings>
-        <option name="imageTag" value="eazybytes/cards:latest" />
-        <option name="containerName" value="eazybytes_cards" />
+        <option name="imageTag" value="eazybyte/cards:latest" />
+        <option name="containerName" value="eazybyte_cards" />
         <option name="envVars">
           <list>
             <DockerEnvVarImpl>
