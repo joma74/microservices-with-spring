@@ -6,3 +6,7 @@ Content-Type: application/json
 {
   "customerId": 1
 }
+
+###
+// @no-log
+GET http://localhost:8080/accounts/config
