@@ -29,11 +29,7 @@ public class AccountsController {
     @PostMapping("/myAccount")
     public Accounts getAccountDetails(@RequestBody Customer customer) {
         Accounts accounts = accountsRepository.findByCustomerId(customer.getCustomerId());
-        if (accounts != null) {
-            return accounts;
-        } else {
-            return null;
-        }
+        return accounts;
     }
 
     @GetMapping("/accounts/config")
