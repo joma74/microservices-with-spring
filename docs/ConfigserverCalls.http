@@ -12,3 +12,15 @@ GET http://localhost:8071/cards/default
 
 ###
 GET http://localhost:8071/loans/default
+
+###
+POST http://localhost:8071/encrypt
+Content-Type: text/plain
+
+Welcome to the EazyBank Accounts Default application
+
+###
+POST http://localhost:8071/decrypt
+Content-Type: text/plain
+
+eae94460c4bc3664b70a5ea37bcd2d380a448db4d87b4d9e743b117262ba05222fe4b59a91a706ab7b88210d06e280e82c71387e384f7c00895b10d4a1705d3c6bca14f85d11aa589026545245a4416c
