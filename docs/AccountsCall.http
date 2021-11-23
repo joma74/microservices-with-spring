@@ -8,5 +8,4 @@ Content-Type: application/json
 }
 
 ###
-// @no-log
 GET http://localhost:8080/accounts/config

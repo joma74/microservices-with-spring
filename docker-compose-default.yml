@@ -1,0 +1,85 @@
+version: "3.8"
+
+services:
+  configserver:
+    image: eazybyte/configserver:latest
+    ports:
+      - "8071:8071"
+    environment:
+      - BPL_JVM_THREAD_COUNT=15
+    deploy:
+      resources:
+        limits:
+          memory: 400m
+    networks:
+      - eazybank-network
+
+  accounts:
+    image: eazybyte/accounts:latest
+    ports:
+      - "8080:8080"
+    environment:
+      - BPL_JVM_THREAD_COUNT=15
+      - SPRING_PROFILES_ACTIVE=default
+      - SPRING_CONFIG_IMPORT=configserver:http://configserver:8071/
+    deploy:
+      resources:
+        limits:
+          memory: 500m
+      restart_policy:
+        condition: on-failure
+        delay: 15s
+        max_attempts: 3
+        window: 120s
+    depends_on:
+      - configserver
+    networks:
+      - eazybank-network
+
+  loans:
+    image: eazybyte/loans:latest
+    ports:
+      - "8090:8090"
+    environment:
+      - BPL_JVM_THREAD_COUNT=15
+      - SPRING_PROFILES_ACTIVE=default
+      - SPRING_CONFIG_IMPORT=configserver:http://configserver:8071/
+    deploy:
+      resources:
+        limits:
+          memory: 500m
+      restart_policy:
+        condition: on-failure
+        delay: 15s
+        max_attempts: 3
+        window: 120s
+    depends_on:
+      - configserver
+    networks:
+      - eazybank-network
+
+  cards:
+    image: eazybyte/cards:latest
+    ports:
+      - "9000:9000"
+    environment:
+      - BPL_JVM_THREAD_COUNT=15
+      - SPRING_PROFILES_ACTIVE=default
+      - SPRING_CONFIG_IMPORT=configserver:http://configserver:8071/
+    deploy:
+      resources:
+        limits:
+          memory: 500m
+      restart_policy:
+        condition: on-failure
+        delay: 15s
+        max_attempts: 3
+        window: 120s
+    depends_on:
+      - configserver
+    restart: on-failure
+    networks:
+      - eazybank-network
+
+networks:
+  eazybank-network:

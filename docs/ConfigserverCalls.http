@@ -6,3 +6,9 @@ GET http://localhost:8071/accounts/dev
 
 ###
 GET http://localhost:8071/accounts/prod
+
+###
+GET http://localhost:8071/cards/default
+
+###
+GET http://localhost:8071/loans/default

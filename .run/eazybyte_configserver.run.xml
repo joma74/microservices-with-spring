@@ -1,9 +1,9 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="eazybyte_cards" type="docker-deploy" factoryName="docker-image" server-name="Docker Local">
+  <configuration default="false" name="eazybyte_configserver" type="docker-deploy" factoryName="docker-image" server-name="Docker Local">
     <deployment type="docker-image">
       <settings>
-        <option name="imageTag" value="eazybyte/cards:latest" />
-        <option name="containerName" value="eazybyte_cards" />
+        <option name="imageTag" value="eazybyte/configserver:latest" />
+        <option name="containerName" value="eazybyte_configserver" />
         <option name="envVars">
           <list>
             <DockerEnvVarImpl>
@@ -15,8 +15,8 @@
         <option name="portBindings">
           <list>
             <DockerPortBindingImpl>
-              <option name="containerPort" value="9000" />
-              <option name="hostPort" value="9000" />
+              <option name="containerPort" value="8071" />
+              <option name="hostPort" value="8071" />
             </DockerPortBindingImpl>
           </list>
         </option>

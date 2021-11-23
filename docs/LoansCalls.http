@@ -6,3 +6,6 @@ Content-Type: application/json
 {
   "customerId": 1
 }
+
+###
+GET http://localhost:8090/loans/config
