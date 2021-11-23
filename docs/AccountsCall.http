@@ -9,3 +9,7 @@ Content-Type: application/json
 
 ###
 GET http://localhost:8080/accounts/config
+
+###
+// @no-log
+POST http://localhost:8080/actuator/refresh

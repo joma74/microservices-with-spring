@@ -8,5 +8,8 @@ Content-Type: application/json
 }
 
 ###
-// @no-log
 GET http://localhost:9000/cards/config
+
+###
+// @no-log
+POST http://localhost:9000/actuator/refresh
