@@ -13,3 +13,14 @@ GET http://localhost:8080/accounts/config
 ### Refresh accounts properties
 // @no-log
 POST http://localhost:8080/actuator/refresh
+
+### Get listing of activeProfiles and propertySources(keyed by following listed names)
+### - server.ports
+### - servletContextInitParams
+### - systemProperties
+### - systemEnvironment
+### - springCloudClientHostInfo
+### - configserver:https://github.com/joma74/microservices-with-spring/configserver/src/main/resources/config/accounts.properties"
+### - configClient
+### - Config resource 'class path resource [application.properties]' via location 'optional:classpath:/'
+GET http://localhost:8080/actuator/env
