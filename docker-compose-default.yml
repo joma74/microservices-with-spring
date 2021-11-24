@@ -3,6 +3,9 @@ version: "3.8"
 services:
   configserver:
     image: eazybyte/configserver:latest
+    ### debug, post-install, ...
+    # working_dir: /
+    # user: root
     ports:
       - "8071:8071"
     environment:
@@ -16,6 +19,9 @@ services:
 
   accounts:
     image: eazybyte/accounts:latest
+    ### debug, post-install, ...
+    # working_dir: /
+    # user: root
     ports:
       - "8080:8080"
     environment:
@@ -38,6 +44,9 @@ services:
 
   loans:
     image: eazybyte/loans:latest
+    ### debug, post-install, ...
+    # working_dir: /
+    # user: root
     ports:
       - "8090:8090"
     environment:
@@ -60,6 +69,9 @@ services:
 
   cards:
     image: eazybyte/cards:latest
+    ### debug, post-install, ...
+    # working_dir: /
+    # user: root
     ports:
       - "9000:9000"
     environment:
