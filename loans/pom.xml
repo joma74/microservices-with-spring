@@ -11,6 +11,8 @@
 
     <artifactId>loans</artifactId>
 
+    <description>Loans Service for Bank Microservices</description>
+
     <properties>
         <java.version>11</java.version>
     </properties>

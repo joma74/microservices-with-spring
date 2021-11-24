@@ -11,6 +11,7 @@
 	<artifactId>configserver</artifactId>
 
 	<description>Configuration Server for Bank Microservices</description>
+
 	<properties>
 		<java.version>11</java.version>
 	</properties>

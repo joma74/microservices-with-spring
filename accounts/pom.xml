@@ -11,6 +11,8 @@
 
     <artifactId>accounts</artifactId>
 
+    <description>Accounts Service for Bank Microservices</description>
+
     <properties>
         <java.version>11</java.version>
     </properties>

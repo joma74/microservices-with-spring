@@ -11,6 +11,8 @@
 
     <artifactId>cards</artifactId>
 
+    <description>Cards Service for Bank Microservices</description>
+
     <properties>
         <java.version>11</java.version>
     </properties>
