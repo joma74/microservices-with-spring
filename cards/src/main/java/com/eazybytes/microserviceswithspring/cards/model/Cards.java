@@ -20,8 +20,14 @@ public class Cards {
     @Column(name = "customer_id")
     private int customerId;
 
+    @Column(name = "card_number")
+    private String cardNumber;
+
     @Column(name = "card_type")
     private String cardType;
+
+    @Column(name = "total_limit")
+    private int totalLimit;
 
     @Column(name = "amount_used")
     private String amountUsed;
