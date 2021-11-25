@@ -1,0 +1,3 @@
+### get accounts registration data from eureka server
+GET http://localhost:8070/eureka/apps/accounts
+Accept: application/json

@@ -7,7 +7,7 @@ Content-Type: application/json
   "customerId": 1
 }
 
-###
+### Get account config(via config server)
 GET http://localhost:8080/accounts/config
 
 ### Refresh accounts properties
@@ -24,3 +24,10 @@ POST http://localhost:8080/actuator/refresh
 ### - configClient
 ### - Config resource 'class path resource [application.properties]' via location 'optional:classpath:/'
 GET http://localhost:8080/actuator/env
+
+###
+GET http://localhost:8080/actuator/info
+Accept: application/vnd.spring-boot.actuator.v3+json
+
+### shutdown accounts
+POST http://localhost:8080/actuator/shutdown
