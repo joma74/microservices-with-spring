@@ -17,17 +17,17 @@ services:
     networks:
       - eazybank-network
 
-  accounts:
-    image: eazybyte/accounts:latest
+  eurekaserver:
+    image: eazybyte/eurekaserver:latest
     ### debug, post-install, ...
     # working_dir: /
     # user: root
     ports:
-      - "8080:8080"
+      - "8070:8070"
     environment:
-      - BPL_JVM_THREAD_COUNT=15
-      - SPRING_PROFILES_ACTIVE=default
-      - SPRING_CONFIG_IMPORT=configserver:http://configserver:8071/
+      BPL_JVM_THREAD_COUNT: 15
+      SPRING_PROFILES_ACTIVE: default
+      SPRING_CONFIG_IMPORT: configserver:http://configserver:8071/
     deploy:
       resources:
         limits:
@@ -39,6 +39,33 @@ services:
         window: 120s
     depends_on:
       - configserver
+    networks:
+      - eazybank-network
+
+  accounts:
+    image: eazybyte/accounts:latest
+    ### debug, post-install, ...
+    # working_dir: /
+    # user: root
+    ports:
+      - "8080:8080"
+    environment:
+      BPL_JVM_THREAD_COUNT: 15
+      SPRING_PROFILES_ACTIVE: default
+      SPRING_CONFIG_IMPORT: configserver:http://configserver:8071/
+      EUREKA_CLIENT_SERVICEURL_DEFAULTZONE: http://eurekaserver:8070/eureka/
+    deploy:
+      resources:
+        limits:
+          memory: 500m
+      restart_policy:
+        condition: on-failure
+        delay: 15s
+        max_attempts: 3
+        window: 120s
+    depends_on:
+      - configserver
+      - eurekaserver
     networks:
       - eazybank-network
 
@@ -53,6 +80,7 @@ services:
       - BPL_JVM_THREAD_COUNT=15
       - SPRING_PROFILES_ACTIVE=default
       - SPRING_CONFIG_IMPORT=configserver:http://configserver:8071/
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eurekaserver:8070/eureka/
     deploy:
       resources:
         limits:
@@ -64,6 +92,7 @@ services:
         window: 120s
     depends_on:
       - configserver
+      - eurekaserver
     networks:
       - eazybank-network
 
@@ -78,6 +107,7 @@ services:
       - BPL_JVM_THREAD_COUNT=15
       - SPRING_PROFILES_ACTIVE=default
       - SPRING_CONFIG_IMPORT=configserver:http://configserver:8071/
+      - EUREKA_CLIENT_SERVICEURL_DEFAULTZONE=http://eurekaserver:8070/eureka/
     deploy:
       resources:
         limits:
@@ -89,6 +119,7 @@ services:
         window: 120s
     depends_on:
       - configserver
+      - eurekaserver
     restart: on-failure
     networks:
       - eazybank-network
