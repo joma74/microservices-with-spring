@@ -31,3 +31,11 @@ Accept: application/vnd.spring-boot.actuator.v3+json
 
 ### shutdown accounts
 POST http://localhost:8080/actuator/shutdown
+
+### Gte Accounts deatils with cards and loans via feign client
+POST http://localhost:8080/myCustomerDetails
+Content-Type: application/json
+
+{
+  "customerId": 1
+}
